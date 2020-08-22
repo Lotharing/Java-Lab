@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadpool/ShutDown.java" afterDir="false" />
+    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式">
+      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadpool/PauseableThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +30,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Java-Lab" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,12 +52,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="25" />
-    <option name="width" value="1783" />
-    <option name="height" value="976" />
-  </component>
   <component name="ProjectId" id="1gRWbdxsE6WFz0IuEk5snRbBoXy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -71,6 +63,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/top/lothar/juc/threadpool" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -84,7 +78,7 @@
       <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab\src\top\lothar\io" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FixedThreadPoolTest">
+  <component name="RunManager" selected="Application.PauseableThreadPool">
     <configuration name="FixedThreadPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.FixedThreadPoolTest" />
       <module name="Java-Lab" />
@@ -121,6 +115,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PauseableThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.PauseableThreadPool" />
+      <module name="Java-Lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.lothar.juc.threadpool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StreamAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.lothar.stream.StreamAPI" />
       <module name="Java-Lab" />
@@ -150,9 +157,11 @@
       <item itemvalue="Application.StreamAPI" />
       <item itemvalue="Application.NewIoAPI" />
       <item itemvalue="Application.FixedThreadPoolTest" />
+      <item itemvalue="Application.PauseableThreadPool" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PauseableThreadPool" />
         <item itemvalue="Application.FixedThreadPoolTest" />
         <item itemvalue="Application.NewIoAPI" />
         <item itemvalue="Application.StreamAPI" />
@@ -230,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597838244690</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式">
+      <created>1598081807158</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598081807158</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +285,45 @@
     <MESSAGE value="JUC/演示Fixed定量线程池 无界队列 内存溢出情况" />
     <MESSAGE value="JUC/演示Single线程池只有一个线程 源码ThreadPool创建方式 / max = 1 core = 1 / Linked无界队列 - OOM" />
     <MESSAGE value="JUC/演示Cache线程池只有一个线程 / SynchronousQueue直接仍线程池 / core = 0 max = integer.max.value / 有OOM情况" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUC/演示Cache线程池只有一个线程 / SynchronousQueue直接仍线程池 / core = 0 max = integer.max.value / 有OOM情况" />
+    <MESSAGE value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="576" key="GridCell.Tab.0.bottom" timestamp="1598089328335">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="576" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089328335" />
+    <state width="1398" height="576" key="GridCell.Tab.0.center" timestamp="1598089328333">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="576" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1598089328333" />
+    <state width="1398" height="576" key="GridCell.Tab.0.left" timestamp="1598089328332">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="576" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1598089328332" />
+    <state width="1398" height="576" key="GridCell.Tab.0.right" timestamp="1598089328334">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="576" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1598089328334" />
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom" timestamp="1598089134630">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089134630" />
+    <state width="1398" height="254" key="GridCell.Tab.1.center" timestamp="1598089134629">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state width="1398" height="254" key="GridCell.Tab.1.left" timestamp="1598089134629">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state width="1398" height="254" key="GridCell.Tab.1.right" timestamp="1598089134629">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598081882141">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598081882141" />
   </component>
 </project>
