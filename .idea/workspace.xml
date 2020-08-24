@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="init package">
-      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage00.java" afterDir="false" />
+    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="ThreadLocal-两个线程打印时间/探究独享对象问题">
+      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage01.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
       <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreadLocalNormalUsage00">
+  <component name="RunManager" selected="Application.ThreadLocalNormalUsage01">
     <configuration name="FixedThreadPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.FixedThreadPoolTest" />
       <module name="Java-Lab" />
@@ -114,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.lothar.stream.StreamAPI" />
+    <configuration name="ThreadLocalNormalUsage00" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage00" />
       <module name="Java-Lab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="top.lothar.stream.*" />
+          <option name="PATTERN" value="top.lothar.juc.threadlocal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadLocalNormalUsage00" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage00" />
+    <configuration name="ThreadLocalNormalUsage01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage01" />
       <module name="Java-Lab" />
       <extension name="coverage">
         <pattern>
@@ -152,19 +152,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StreamAPI" />
       <item itemvalue="Application.NewIoAPI" />
       <item itemvalue="Application.FixedThreadPoolTest" />
       <item itemvalue="Application.PauseableThreadPool" />
       <item itemvalue="Application.ThreadLocalNormalUsage00" />
+      <item itemvalue="Application.ThreadLocalNormalUsage01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadLocalNormalUsage01" />
         <item itemvalue="Application.ThreadLocalNormalUsage00" />
         <item itemvalue="Application.PauseableThreadPool" />
         <item itemvalue="Application.FixedThreadPoolTest" />
         <item itemvalue="Application.NewIoAPI" />
-        <item itemvalue="Application.StreamAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +190,7 @@
       <workItem from="1597827668426" duration="140000" />
       <workItem from="1597836806042" duration="2152000" />
       <workItem from="1598162160491" duration="885000" />
-      <workItem from="1598280671696" duration="1182000" />
+      <workItem from="1598280671696" duration="1479000" />
     </task>
     <task id="LOCAL-00001" summary="NIO/Base">
       <created>1597750484305</created>
@@ -262,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598281848845</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ThreadLocal-两个线程打印时间/探究独享对象问题">
+      <created>1598282615564</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598282615564</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +311,8 @@
     <MESSAGE value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
     <MESSAGE value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
     <MESSAGE value="init package" />
-    <option name="LAST_COMMIT_MESSAGE" value="init package" />
+    <MESSAGE value="ThreadLocal-两个线程打印时间/探究独享对象问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="ThreadLocal-两个线程打印时间/探究独享对象问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1598114442405">
