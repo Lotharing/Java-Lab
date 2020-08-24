@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式">
-      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadpool/PauseableThreadPool.java" afterDir="false" />
+    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/lothar/juc/TMP.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +38,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>peek</find>
-      <find>join</find>
-      <find>put</find>
-      <find>open</find>
-      <find>o</find>
-      <find>map</find>
-      <find>Optional</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -63,8 +52,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/top/lothar/juc/threadpool" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -189,6 +185,8 @@
       <workItem from="1597752939484" duration="802000" />
       <workItem from="1597827668426" duration="140000" />
       <workItem from="1597836806042" duration="2152000" />
+      <workItem from="1598162160491" duration="885000" />
+      <workItem from="1598280671696" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="NIO/Base">
       <created>1597750484305</created>
@@ -246,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598081807158</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑">
+      <created>1598089592711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598089592711</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,44 +291,76 @@
     <MESSAGE value="JUC/演示Single线程池只有一个线程 源码ThreadPool创建方式 / max = 1 core = 1 / Linked无界队列 - OOM" />
     <MESSAGE value="JUC/演示Cache线程池只有一个线程 / SynchronousQueue直接仍线程池 / core = 0 max = integer.max.value / 有OOM情况" />
     <MESSAGE value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
+    <MESSAGE value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="576" key="GridCell.Tab.0.bottom" timestamp="1598089328335">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="576" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089328335" />
-    <state width="1398" height="576" key="GridCell.Tab.0.center" timestamp="1598089328333">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="576" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1598089328333" />
-    <state width="1398" height="576" key="GridCell.Tab.0.left" timestamp="1598089328332">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="576" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1598089328332" />
-    <state width="1398" height="576" key="GridCell.Tab.0.right" timestamp="1598089328334">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="576" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1598089328334" />
-    <state width="1398" height="254" key="GridCell.Tab.1.bottom" timestamp="1598089134630">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089134630" />
-    <state width="1398" height="254" key="GridCell.Tab.1.center" timestamp="1598089134629">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="254" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
-    <state width="1398" height="254" key="GridCell.Tab.1.left" timestamp="1598089134629">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="254" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
-    <state width="1398" height="254" key="GridCell.Tab.1.right" timestamp="1598089134629">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1398" height="254" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598081882141">
+    <state x="208" y="31" key="#Project_Structure" timestamp="1598114442405">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1598114442405" />
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1598114292255">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598114292255" />
+    <state width="1398" height="254" key="GridCell.Tab.0.bottom" timestamp="1598117685079">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598117685079" />
+    <state width="1398" height="576" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089328335" />
+    <state width="1398" height="254" key="GridCell.Tab.0.center" timestamp="1598117685077">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598117685077" />
+    <state width="1398" height="576" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1598089328333" />
+    <state width="1398" height="254" key="GridCell.Tab.0.left" timestamp="1598117685077">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598117685077" />
+    <state width="1398" height="576" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1598089328332" />
+    <state width="1398" height="254" key="GridCell.Tab.0.right" timestamp="1598117685078">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598117685078" />
+    <state width="1398" height="576" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1598089328334" />
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom" timestamp="1598117685080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598117685080" />
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089134630" />
+    <state width="1398" height="254" key="GridCell.Tab.1.center" timestamp="1598117685080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1598117685080" />
+    <state width="1398" height="254" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state width="1398" height="254" key="GridCell.Tab.1.left" timestamp="1598117685079">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1598117685079" />
+    <state width="1398" height="254" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state width="1398" height="254" key="GridCell.Tab.1.right" timestamp="1598117685080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="254" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1598117685080" />
+    <state width="1398" height="254" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1598089134629" />
+    <state x="524" y="159" key="RollbackChangesDialog" timestamp="1598112885746">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="524" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1598112885746" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1598089605292">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598081882141" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1598089605292" />
+    <state x="418" y="82" width="604" height="735" key="find.popup" timestamp="1598114492401">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="418" y="82" width="604" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1598114492401" />
+    <state x="385" y="145" width="670" height="682" key="search.everywhere.popup" timestamp="1598281315171">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="385" y="137" width="670" height="764" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598176810184" />
+    <state x="385" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1598090777704" />
+    <state x="385" y="145" width="670" height="682" key="search.everywhere.popup/0.23.1440.803@0.23.1440.803" timestamp="1598281315171" />
   </component>
 </project>
