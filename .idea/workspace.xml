@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/lothar/juc/TMP.java" beforeDir="false" />
+    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="init package">
+      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage00.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/top/lothar/juc/threadpool" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/top/lothar/juc/threadlocal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -64,17 +63,18 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab\src\top\lothar\io" />
-      <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/top/lothar/juc/threadlocal" />
       <recent name="$PROJECT_DIR$/src/top/lothar/juc/threadpool" />
       <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab\src\top\lothar\juc\threadpool" />
       <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab\src\top\lothar\io" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab\src\top\lothar\io" />
+      <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.PauseableThreadPool">
+  <component name="RunManager" selected="Application.ThreadLocalNormalUsage00">
     <configuration name="FixedThreadPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.FixedThreadPoolTest" />
       <module name="Java-Lab" />
@@ -84,16 +84,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Java-Lab" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,6 +127,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadLocalNormalUsage00" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage00" />
+      <module name="Java-Lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.lothar.juc.threadlocal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -149,14 +152,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.StreamAPI" />
       <item itemvalue="Application.NewIoAPI" />
       <item itemvalue="Application.FixedThreadPoolTest" />
       <item itemvalue="Application.PauseableThreadPool" />
+      <item itemvalue="Application.ThreadLocalNormalUsage00" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadLocalNormalUsage00" />
         <item itemvalue="Application.PauseableThreadPool" />
         <item itemvalue="Application.FixedThreadPoolTest" />
         <item itemvalue="Application.NewIoAPI" />
@@ -186,7 +190,7 @@
       <workItem from="1597827668426" duration="140000" />
       <workItem from="1597836806042" duration="2152000" />
       <workItem from="1598162160491" duration="885000" />
-      <workItem from="1598280671696" duration="640000" />
+      <workItem from="1598280671696" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="NIO/Base">
       <created>1597750484305</created>
@@ -251,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598089592711</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="init package">
+      <created>1598281848845</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598281848845</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +303,8 @@
     <MESSAGE value="JUC/演示Cache线程池只有一个线程 / SynchronousQueue直接仍线程池 / core = 0 max = integer.max.value / 有OOM情况" />
     <MESSAGE value="JUC/演示shutdown、shutdownNow 、isTerminated 、awaitTerminated、awaitTerminated 五种线程池关闭的方法和关闭方式" />
     <MESSAGE value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
+    <MESSAGE value="init package" />
+    <option name="LAST_COMMIT_MESSAGE" value="init package" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1598114442405">
