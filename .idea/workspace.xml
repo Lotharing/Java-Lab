@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="ThreadLocal-两个线程打印时间/探究独享对象问题">
-      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage01.java" afterDir="false" />
+    <list default="true" id="79a0a614-7011-4b4b-8151-5f92392db163" name="Default Changelist" comment="ThreadLocal-for循环30个线程打印时间/探究独享对象问题">
+      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/top/lothar/juc/threadlocal/ThreadLocalNormalUsage03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,33 +76,7 @@
       <recent name="D:\IDEA\IDEAWorkSpace\Java-Lab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreadLocalNormalUsage01">
-    <configuration name="FixedThreadPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.FixedThreadPoolTest" />
-      <module name="Java-Lab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.lothar.juc.threadpool.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NewIoAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.lothar.io.NewIoAPI" />
-      <module name="Java-Lab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.lothar.io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ThreadLocalNormalUsage03">
     <configuration name="PauseableThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadpool.PauseableThreadPool" />
       <module name="Java-Lab" />
@@ -140,6 +116,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadLocalNormalUsage02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage02" />
+      <module name="Java-Lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.lothar.juc.threadlocal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadLocalNormalUsage03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.lothar.juc.threadlocal.ThreadLocalNormalUsage03" />
+      <module name="Java-Lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.lothar.juc.threadlocal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -152,19 +154,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.NewIoAPI" />
-      <item itemvalue="Application.FixedThreadPoolTest" />
       <item itemvalue="Application.PauseableThreadPool" />
       <item itemvalue="Application.ThreadLocalNormalUsage00" />
       <item itemvalue="Application.ThreadLocalNormalUsage01" />
+      <item itemvalue="Application.ThreadLocalNormalUsage02" />
+      <item itemvalue="Application.ThreadLocalNormalUsage03" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadLocalNormalUsage03" />
+        <item itemvalue="Application.ThreadLocalNormalUsage02" />
         <item itemvalue="Application.ThreadLocalNormalUsage01" />
         <item itemvalue="Application.ThreadLocalNormalUsage00" />
         <item itemvalue="Application.PauseableThreadPool" />
-        <item itemvalue="Application.FixedThreadPoolTest" />
-        <item itemvalue="Application.NewIoAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +192,7 @@
       <workItem from="1597827668426" duration="140000" />
       <workItem from="1597836806042" duration="2152000" />
       <workItem from="1598162160491" duration="885000" />
-      <workItem from="1598280671696" duration="1479000" />
+      <workItem from="1598280671696" duration="2458000" />
     </task>
     <task id="LOCAL-00001" summary="NIO/Base">
       <created>1597750484305</created>
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598282615564</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ThreadLocal-for循环30个线程打印时间/探究独享对象问题">
+      <created>1598283025506</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598283025506</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +321,8 @@
     <MESSAGE value="JUC/演示自定义线程池/自定义钩子函数（暂停、开始）控制线程池线程执行/利用beforeExecute线程执行前对lock控制的标记检测是否停止/执行（lock.newCondition.的wait休眠 signalAll唤醒）提供线程池不具备的钩子功能，处理线程执行前的逻辑" />
     <MESSAGE value="init package" />
     <MESSAGE value="ThreadLocal-两个线程打印时间/探究独享对象问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="ThreadLocal-两个线程打印时间/探究独享对象问题" />
+    <MESSAGE value="ThreadLocal-for循环30个线程打印时间/探究独享对象问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="ThreadLocal-for循环30个线程打印时间/探究独享对象问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1598114442405">
@@ -323,25 +333,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598114292255" />
-    <state width="1398" height="254" key="GridCell.Tab.0.bottom" timestamp="1598117685079">
+    <state width="1398" height="372" key="GridCell.Tab.0.bottom" timestamp="1598283342381">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="254" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598117685079" />
+    <state width="1398" height="372" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598283342381" />
     <state width="1398" height="576" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1598089328335" />
-    <state width="1398" height="254" key="GridCell.Tab.0.center" timestamp="1598117685077">
+    <state width="1398" height="372" key="GridCell.Tab.0.center" timestamp="1598283342380">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="254" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598117685077" />
+    <state width="1398" height="372" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598283342380" />
     <state width="1398" height="576" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1598089328333" />
-    <state width="1398" height="254" key="GridCell.Tab.0.left" timestamp="1598117685077">
+    <state width="1398" height="372" key="GridCell.Tab.0.left" timestamp="1598283342379">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="254" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598117685077" />
+    <state width="1398" height="372" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598283342379" />
     <state width="1398" height="576" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1598089328332" />
-    <state width="1398" height="254" key="GridCell.Tab.0.right" timestamp="1598117685078">
+    <state width="1398" height="372" key="GridCell.Tab.0.right" timestamp="1598283342380">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="254" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598117685078" />
+    <state width="1398" height="372" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598283342380" />
     <state width="1398" height="576" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1598089328334" />
     <state width="1398" height="254" key="GridCell.Tab.1.bottom" timestamp="1598117685080">
       <screen x="0" y="0" width="1440" height="900" />
