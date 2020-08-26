@@ -2,12 +2,13 @@ package top.lothar.juc.threadlocal;
 
 /**
  * 描述：     演示ThreadLocal用法2：避免传递参数的麻烦
+ * （其实参数层层传递也可以，就是耦合高嘛）
  */
 public class ThreadLocalNormalUsage06 {
 
     public static void main(String[] args) {
         new Service1().process("LT");
-
+        new Service1().process("LW");
     }
 }
 
