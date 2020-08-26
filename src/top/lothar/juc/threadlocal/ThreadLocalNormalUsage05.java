@@ -26,17 +26,28 @@ public class ThreadLocalNormalUsage05 {
     public static ExecutorService threadPool = Executors.newFixedThreadPool(10);
 
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 1000; i++) {
-            int finalI = i;
-            threadPool.submit(new Runnable() {
-                @Override
-                public void run() {
-                    String date = new ThreadLocalNormalUsage05().date(finalI);
-                    System.out.println(date);
-                }
-            });
+        try{
+            for (int i = 0; i < 1000; i++) {
+                int finalI = i;
+                threadPool.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        String date = new ThreadLocalNormalUsage05().date(finalI);
+                        System.out.println(date);
+                    }
+                });
+            }
+            threadPool.shutdown();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            // ThreadLocal被垃圾回收后，在ThreadLocalMap里对应的Entry的键值会变成null，
+            // 但是Entry是强引用，那么Entry里面存储的Object，并没有办法进行回收，
+            // 所以ThreadLocalMap 做了一些额外的回收工作 remove , 如果不回收可能会导致OOM内存溢出
+            // 源码：ThreadLocalMap.remove(K:this[ThreadLocal])
+            ThreadSafeFormatter.dateFormatThreadLocal2.remove();
         }
-        threadPool.shutdown();
+
     }
 
     public String date(int seconds) {
