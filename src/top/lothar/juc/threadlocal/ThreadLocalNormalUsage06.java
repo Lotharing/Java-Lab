@@ -32,6 +32,9 @@ class Service2 {
         User user = UserContextHolder.holder.get();
         ThreadSafeFormatter.dateFormatThreadLocal.get();
         System.out.println("Service2拿到用户名：" + user.name);
+        //UserContextHolder.holder.remove(); //清空会有空指针异常
+        User FX = new User("FX");
+        //UserContextHolder.holder.set(FX); //可以设置新值
         new Service3().process();
     }
 }
