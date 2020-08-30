@@ -6,6 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 描述：     Lock不会像synchronized一样，异常的时候自动释放锁，
  *           所以最佳实践是，finally中释放锁，以便保证发生异常的时候锁一定被释放
+ *           悲观锁
  */
 public class MustUnlock {
     //最典型的实现就是ReentrantLock
