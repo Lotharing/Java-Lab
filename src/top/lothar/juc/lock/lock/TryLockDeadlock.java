@@ -50,6 +50,7 @@ public class TryLockDeadlock implements Runnable {
                             }
                         } finally {
                             lock1.unlock();
+                            System.out.println("线程1释放锁");
                             Thread.sleep(new Random().nextInt(1000));
                         }
                     } else {
@@ -79,6 +80,7 @@ public class TryLockDeadlock implements Runnable {
                             }
                         } finally {
                             lock2.unlock();
+                            System.out.println("线程2释放锁2");
                             Thread.sleep(new Random().nextInt(1000));
                         }
                     } else {
