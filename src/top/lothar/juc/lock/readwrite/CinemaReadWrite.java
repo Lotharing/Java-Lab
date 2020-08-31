@@ -76,6 +76,18 @@ public class CinemaReadWrite {
         new Thread(()->read(),"Thread5").start();
 
         //电影院 共享读 单独写 问题
+        /**
+         * Thread1得到了读锁，正在读取
+         * Thread2得到了读锁，正在读取
+         * Thread1释放读锁
+         * Thread2释放读锁
+         *
+         * Thread3得到了写锁，正在写入
+         * Thread3释放写锁
+         *
+         * Thread4得到了写锁，正在写入
+         * Thread4释放写锁
+         */
 //        new Thread(()->read(),"Thread1").start();
 //        new Thread(()->read(),"Thread2").start();
 //        new Thread(()->write(),"Thread3").start();
