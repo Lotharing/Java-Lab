@@ -33,6 +33,7 @@ public class SpinLock {
     public void lock() {
         Thread current = Thread.currentThread();
         // null 希望没有人使用锁  current 原子让当前线程使用
+        // 学习Atomic ： CAS原子引用没有是null 就把当前线程引用放进原子中
         while (!sign.compareAndSet(null, current)) {
             //打印出自旋的过程  这里就会暴露缺点如果0锁不释放 1就会一直自旋
             System.out.println(Thread.currentThread().getName()+"自旋获取失败，再次尝试");
@@ -42,6 +43,7 @@ public class SpinLock {
     public void unlock() {
         Thread current = Thread.currentThread();
         //当前线程本身  null 没有任何人持有锁
+        // 学习Atomic ： CAS原子引用是当前线程 就把当前线程移除原子引用 可以让其他线程在持有此原子引用
         sign.compareAndSet(current, null);
     }
 
