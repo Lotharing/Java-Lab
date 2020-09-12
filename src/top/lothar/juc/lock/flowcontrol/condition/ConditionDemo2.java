@@ -8,7 +8,12 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 描述：     演示用Condition实现生产者消费者模式 等待/唤醒的思想
  *
+ *  与wait / notify 用法性质几乎一样
+ *  但是一个lock锁可以生成多个condition对象  /  wait notify 只是对synchronized
+ *
  * 通过控制两个 condition 生产者满了阻塞 唤醒消费 -> 消费完了 就唤醒生产
+ *
+ * 注意：condition 是建立在lock上的 在await / signal 前必须拿到锁
  */
 public class ConditionDemo2 {
     //队列大小
