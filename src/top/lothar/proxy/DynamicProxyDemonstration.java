@@ -38,5 +38,17 @@ public class DynamicProxyDemonstration {
 
         String goodbye = subject.sayGoodBye();
         System.out.println(goodbye);
+
+        /**静态代理**/
+
+        System.out.println("JDK - 静态代理");
+
+        /**
+         * 通过新实现接口的类（代理类）中 注入（真实类）对象，在引用真实类方法之前/之后可以进行操作处理
+         */
+        RealSubject object = new RealSubject();
+        StaticProxyDemonstration staticProxyDemonstration = new StaticProxyDemonstration(object);
+        System.out.println(staticProxyDemonstration.sayHello("null"));
+        System.out.println(staticProxyDemonstration.sayGoodBye());
     }
 }
