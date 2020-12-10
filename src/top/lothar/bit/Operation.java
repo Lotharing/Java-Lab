@@ -23,7 +23,29 @@ package top.lothar.bit;
 public class Operation {
 
     public static void main(String[] args) {
-        parity(97);
+        //parity(97);
+        System.out.println(sum(7));
+    }
+
+    /**
+     * Q: 判断一个整型数二进制位有多少个 1
+     * @param a
+     * @return
+     */
+    public static int sum(int a){
+        //记数
+        int sum = 0;
+        // 右移到0时结束
+        while(a>=1) {
+            // 按位与操作 判断最后一位是否是1
+            if ((a & 1) == 1){
+                //累加计数
+                sum +=1;
+            }
+            //a 每次二进制右移一位
+            a = a>>1;
+        }
+        return sum;
     }
 
     public static void parity(int num){
