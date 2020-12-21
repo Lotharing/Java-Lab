@@ -88,6 +88,10 @@ public class ClassLoaderStudy {
          *    当一个类的class对象不再被引用的时候，生命周期就结束类，对应方法区中的数据也会被清理
          *    jvm自带的类加载器是不会卸载的，用户自定义的类加载器是可以卸载的
          */
+
+        System.out.println(Runtime.getRuntime().totalMemory()/1024.0/1024.0);
+        System.out.println(Runtime.getRuntime().freeMemory()/1024.0/1024.0);
+        System.out.println(Runtime.getRuntime().maxMemory()/1024.0/1024.0);
     }
 
 
