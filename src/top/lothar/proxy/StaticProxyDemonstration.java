@@ -6,11 +6,11 @@ package top.lothar.proxy;
  * @author LuTong.Zhao
  * @Date 2020/12/8 10:33
  */
-public class StaticProxyDemonstration implements Subject{
+public class StaticProxyDemonstration implements Subject {
 
     private RealSubject realSubject;
 
-    public StaticProxyDemonstration(RealSubject realSubject){
+    public StaticProxyDemonstration(RealSubject realSubject) {
         this.realSubject = realSubject;
     }
 

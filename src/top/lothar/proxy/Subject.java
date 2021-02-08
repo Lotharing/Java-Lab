@@ -10,6 +10,7 @@ public interface Subject {
 
     /**
      * 你好
+     *
      * @param name
      * @return
      */
@@ -17,6 +18,7 @@ public interface Subject {
 
     /**
      * 再见
+     *
      * @return
      */
     String sayGoodBye();

@@ -31,7 +31,7 @@ public class DynamicProxyDemonstration {
          */
         Subject subject = (Subject) Proxy.newProxyInstance(loader, interfaces, handler);
 
-        System.out.println("动态代理对象的类型："+subject.getClass().getName());
+        System.out.println("动态代理对象的类型：" + subject.getClass().getName());
 
         String hello = subject.sayHello("Lutong");
         System.out.println(hello);

@@ -6,11 +6,11 @@ package top.lothar.proxy;
  * @author LuTong.Zhao
  * @Date 2020/12/8 10:08
  */
-public class RealSubject implements Subject{
+public class RealSubject implements Subject {
 
     @Override
     public String sayHello(String name) {
-        return "Hello ," +name;
+        return "Hello ," + name;
     }
 
     @Override
